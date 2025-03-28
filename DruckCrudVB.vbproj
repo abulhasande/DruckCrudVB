@@ -168,5 +168,8 @@
   <ItemGroup>
     <None Include="Resources\images.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbScripts.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

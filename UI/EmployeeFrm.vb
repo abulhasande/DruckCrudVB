@@ -21,6 +21,7 @@ Public Class EmployeeFrm
             btnEditColumn.Text = "Edit"
             btnEditColumn.UseColumnTextForButtonValue = True
             dgvEmployee.Columns.Add(btnEditColumn)
+
         End If
 
         ' Add Delete Button Column if not already added
@@ -55,7 +56,7 @@ Public Class EmployeeFrm
         If e.ColumnIndex >= 0 AndAlso dgvEmployee.Columns(e.ColumnIndex).Name = "btnEdit" Then
             Dim rowIndex As Integer = e.RowIndex
             If rowIndex >= 0 Then
-                'emp.Id = Convert.ToInt32(dgvEmployee.Rows(rowIndex).Cells("Id").Value)
+
                 selectedRowIndex = rowIndex
                 txtName.Text = dgvEmployee.Rows(rowIndex).Cells("Name").Value.ToString()
                 txtPosition.Text = dgvEmployee.Rows(rowIndex).Cells("Position").Value.ToString()
@@ -137,7 +138,7 @@ Public Class EmployeeFrm
     Private Sub LoadEmployees()
         Dim employees As New List(Of Employee)()
         employees = empBll.GetAllEmployees()
-        If employees.Count > 0 Then
+        If employees.Count >= 0 Then
             dgvEmployee.DataSource = employees
             dgvEmployee.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
 

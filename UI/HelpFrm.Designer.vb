@@ -54,10 +54,11 @@ Partial Class HelpFrm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(394, 437)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.MediumOrchid
+        Me.Label3.Location = New System.Drawing.Point(360, 407)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 15)
+        Me.Label3.Size = New System.Drawing.Size(91, 20)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Danke sehr"
         '
