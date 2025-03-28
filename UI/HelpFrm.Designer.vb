@@ -46,10 +46,9 @@ Partial Class HelpFrm
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(63, 77)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(672, 15)
+        Me.Label1.Size = New System.Drawing.Size(315, 15)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "2. So Please run the DB script and update the DataSource in connection string in " &
-    "App.Config File b4 execution the program"
+        Me.Label1.Text = "2. So Please run the DB script  b4 execution the program"
         '
         'Label3
         '
