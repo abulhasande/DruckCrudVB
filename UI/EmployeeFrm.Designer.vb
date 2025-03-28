@@ -24,6 +24,7 @@ Partial Class EmployeeFrm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EmployeeFrm))
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -73,7 +74,7 @@ Partial Class EmployeeFrm
         Me.txtPosition.Multiline = True
         Me.txtPosition.Name = "txtPosition"
         Me.txtPosition.Size = New System.Drawing.Size(329, 35)
-        Me.txtPosition.TabIndex = 4
+        Me.txtPosition.TabIndex = 2
         '
         'cbDepartment
         '
@@ -83,7 +84,7 @@ Partial Class EmployeeFrm
         Me.cbDepartment.Location = New System.Drawing.Point(151, 226)
         Me.cbDepartment.Name = "cbDepartment"
         Me.cbDepartment.Size = New System.Drawing.Size(329, 36)
-        Me.cbDepartment.TabIndex = 5
+        Me.cbDepartment.TabIndex = 4
         '
         'btnSave
         '
@@ -91,8 +92,8 @@ Partial Class EmployeeFrm
         Me.btnSave.Location = New System.Drawing.Point(554, 41)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(85, 34)
-        Me.btnSave.TabIndex = 6
-        Me.btnSave.Text = "Save"
+        Me.btnSave.TabIndex = 5
+        Me.btnSave.Text = "SAVE"
         Me.btnSave.UseVisualStyleBackColor = True
         '
         'btnReset
@@ -101,8 +102,8 @@ Partial Class EmployeeFrm
         Me.btnReset.Location = New System.Drawing.Point(554, 105)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(85, 34)
-        Me.btnReset.TabIndex = 7
-        Me.btnReset.Text = "Reset"
+        Me.btnReset.TabIndex = 6
+        Me.btnReset.Text = "RESET"
         Me.btnReset.UseVisualStyleBackColor = True
         '
         'Label1
@@ -147,21 +148,29 @@ Partial Class EmployeeFrm
         '
         'dgvEmployee
         '
-        Me.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEmployee.Location = New System.Drawing.Point(52, 363)
-        Me.dgvEmployee.Margin = New System.Windows.Forms.Padding(10)
-        Me.dgvEmployee.Name = "dgvEmployee"
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvEmployee.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvEmployee.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEmployee.Location = New System.Drawing.Point(52, 363)
+        Me.dgvEmployee.Name = "dgvEmployee"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(3)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvEmployee.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvEmployee.RowHeadersWidth = 60
-        Me.dgvEmployee.Size = New System.Drawing.Size(672, 280)
-        Me.dgvEmployee.TabIndex = 12
+        Me.dgvEmployee.Size = New System.Drawing.Size(750, 280)
+        Me.dgvEmployee.TabIndex = 7
         '
         'GroupBox1
         '
@@ -180,7 +189,7 @@ Partial Class EmployeeFrm
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(0)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(0)
-        Me.GroupBox1.Size = New System.Drawing.Size(672, 301)
+        Me.GroupBox1.Size = New System.Drawing.Size(750, 301)
         Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Employee Information"
@@ -197,7 +206,7 @@ Partial Class EmployeeFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(779, 670)
+        Me.ClientSize = New System.Drawing.Size(851, 670)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dgvEmployee)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

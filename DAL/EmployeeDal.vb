@@ -34,7 +34,7 @@ Public Class EmployeeDal
                 cmd.Parameters.AddWithValue("@Name", employee.Name)
                 cmd.Parameters.AddWithValue("@Position", employee.Position)
                 cmd.Parameters.AddWithValue("@Department", employee.Department)
-                cmd.Parameters.AddWithValue("@Name", employee.Email)
+                cmd.Parameters.AddWithValue("@Email", employee.Email)
                 conn.Open()
                 Return cmd.ExecuteNonQuery() > 0
             End Using
@@ -43,7 +43,7 @@ Public Class EmployeeDal
 
     ' Delete Employee
     Public Function Delete(employeeId As Integer) As Boolean
-        Dim delQuery As String = "Delete * from Employees Where Id = @Id"
+        Dim delQuery As String = "Delete from Employees Where Id = @Id"
 
         Using conn As SqlConnection = db.GetConnection()
             Using cmd As New SqlCommand(delQuery, conn)
