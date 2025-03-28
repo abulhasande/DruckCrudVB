@@ -1,10 +1,10 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Configuration
+Imports System.Data.SqlClient
 
 Public Class DatabaseHelper
 
 
-    Private ReadOnly connectionString As String = "Data Source=.;Initial Catalog=DruckEmployee;Integrated Security=True"
-
+    Private ReadOnly connectionString As String = ConfigurationManager.ConnectionStrings("MyDatabase").ConnectionString
 
     Public Function GetConnection() As SqlConnection
 
